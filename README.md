@@ -66,7 +66,8 @@ La cuenta de administrador se crea automáticamente al arrancar la aplicación p
 
 ## Testing
 
-El proyecto incluye tests unitarios ubicados en `src/test/java`, entre ellos la verificación de la correcta conversión entre `Recipe` y `RecipeDTO` (`RecipeMapperTest`).
+El proyecto incluye tests unitarios ubicados en `src/test/java`, incluyendo la verificación del mapeo de datos (`RecipeMapperTest`).
+
 
 ## Autora
 
