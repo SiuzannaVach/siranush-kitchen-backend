@@ -3,11 +3,13 @@ package com.siuzanna.controller;
 import com.siuzanna.dto.RegisterRequest;
 import com.siuzanna.model.User;
 import com.siuzanna.repository.UserRepository;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AuthController {
 
     private final UserRepository userRepository;
@@ -16,6 +18,10 @@ public class AuthController {
     public AuthController(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+    }
+    @GetMapping("/me")
+    public String me(Authentication authentication) {
+        return authentication.getName();
     }
 
     @PostMapping("/register")
