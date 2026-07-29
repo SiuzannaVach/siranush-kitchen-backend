@@ -9,7 +9,7 @@ import java.util.UUID;
 @Service
 public class FileStorageService {
 
-    // Папка на вашем Mac, куда будут сохраняться сочные фото рецептов
+
     private final Path fileStorageLocation = Paths.get("uploads").toAbsolutePath().normalize();
 
     public FileStorageService() {

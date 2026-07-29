@@ -19,17 +19,20 @@ El proyecto sigue una arquitectura en capas típica de Spring Boot:
 
 ```
 com.siuzanna
-├── model/          Entidades JPA (Recipe, User, Category)
-├── repository/      Acceso a datos con Spring Data JPA
-├── dto/             Objetos de transferencia de datos (RecipeDTO, RegisterRequest)
-├── mapper/          Conversión entre entidades y DTOs (RecipeMapper)
-├── controller/      Endpoints REST (RecipeController, AuthController)
-├── config/          Configuración de seguridad (SecurityConfig, DataInitializer, CustomUserDetailsService)
-└── service/         Lógica auxiliar (FileStorageService)
+ ├── config/       # Configuración global y reglas de seguridad
+ ├── controller/   # Endpoints de la API (reciben datos del Frontend)
+ ├── dto/          # Objetos de transferencia de datos limpios
+ ├── mapper/       # Traductor automático entre Model y DTO
+ ├── model/        # Entidades de la base de datos (Receta, Usuario, Categoría)
+ ├── repository/   # Comunicación directa con la base de datos PostgreSQL
+ └── service/      # Lógica de negocio y procesamiento de datos (Imágenes)
+
 ```
 
 **Flujo de una petición:**
-Controller → Service → Repository → Entity (base de datos) → Mapper → DTO → respuesta al cliente.
+Frontend ⇄ Controller ⇄ Service ⇄ Repository ⇄ PostgreSQL (Base de Datos)
+└─ (Mapper) ⇄ DTO ⇄ Frontend
+
 
 
 ## 🛠️Stack tecnológico
