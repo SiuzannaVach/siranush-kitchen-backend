@@ -69,8 +69,6 @@ Frontend ⇄ Controller ⇄ Service ⇄ Repository ⇄ PostgreSQL (Base de Datos
 ## 🔓 Configuración de CORS
 El backend incluye la configuración de CORS necesaria en la seguridad para permitir y procesar de forma segura las peticiones entrantes desde el servidor de desarrollo del Frontend (`http://localhost:5173`).
 
-## 🚀Configuración local
-
 ## 🚀 Configuración y Uso Local
 
 1. Crear una base de datos PostgreSQL llamada `siranush_kitchen`.
