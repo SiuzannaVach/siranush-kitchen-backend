@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
-    // Здесь пока пусто, так как все базовые методы (создать, удалить, изменить) уже есть внутри JpaRepository!
+    // RecipeRepository nos da todos los métodos automáticos de JPA para hacer el CRUD de recetas en la base de datos sin escribir SQL
 }

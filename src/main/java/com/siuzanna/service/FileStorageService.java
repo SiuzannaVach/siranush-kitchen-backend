@@ -21,7 +21,7 @@ public class FileStorageService {
     }
 
     public String storeFile(MultipartFile file) {
-        // Генерируем уникальное имя файла, чтобы картинки не перезаписывали друг друга
+
         String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
         try {
             Path targetLocation = this.fileStorageLocation.resolve(fileName);
