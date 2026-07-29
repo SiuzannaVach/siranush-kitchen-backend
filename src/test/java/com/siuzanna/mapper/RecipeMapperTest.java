@@ -10,6 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RecipeMapperTest {
+//creamos una receta de prueba,pasamos por el Mapper y verifica con assertEquals!
 
     @Test
     void toDTO_deberiaConvertirRecipeCorrectamente() {
